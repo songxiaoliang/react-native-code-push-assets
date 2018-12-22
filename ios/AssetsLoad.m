@@ -16,7 +16,7 @@ RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(isFileExist:(NSString *)filePath){
     return @(fileExists);
 }
 
-RCT_EXPORT_METHOD(travelDrawable:(NSString *)bundlePath callBack:(RCTResponseSenderBlock)callback){
+RCT_EXPORT_METHOD(searchDrawableFile:(NSString *)bundlePath callBack:(RCTResponseSenderBlock)callback){
     bundlePath = [bundlePath substringFromIndex:6];
     NSString *assetPath = [[bundlePath stringByDeletingLastPathComponent] stringByAppendingPathComponent:@"assets"];
     NSString *imgPath;
